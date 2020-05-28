@@ -1,4 +1,6 @@
 # advnacedtestingone
-Advanced testing one
-New line
+Testing Automation Course
+
+
+Learn basics of git
 
