@@ -25,8 +25,8 @@ git commit
 git commit -a
 
 ### vi   - editor
-### When 'vi' editor opens, press 'i' in order to start changing the file
-### when done, press ESC and then :wq   (write - quit)
+When 'vi' editor opens, press 'i' in order to start changing the file
+when done, press ESC and then :wq   (write - quit)
 
 ### push changes to server
 git push origin master
