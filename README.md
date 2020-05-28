@@ -67,17 +67,17 @@ git pull
 ### merge branches
 git merge <branchname>
 
-# when there are conflicts - check conflicts in base file - check changes before merge
+### when there are conflicts - check conflicts in base file - check changes before merge
 git diff
 git diff --base <filename>
 git diff <sourcebranch> <targetbranch>
 
-# when you resolve conflicts
+### when you resolve conflicts
 git add <filename>
 
-# when all conflicts are resolved
+### when all conflicts are resolved
 git commit
 
-# last 10 commits
+### last 10 commits
 git log
 
