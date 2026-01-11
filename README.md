@@ -50,7 +50,7 @@ git branch -d feature/login-tests   # delete merged branch
 ## Sync with remote
 
 ```
-git remote -v                   # list remotes`
+git remote -v                   # list remotes
 git pull                        # fetch + merge from remote
 git fetch                       # fetch only
 git push                        # push current branch
@@ -84,12 +84,31 @@ git clone username@host:/path/to/repository
 ```
 
 ### status
-```git status```
+```
+git status
+git status -s
+git status --short
+git status --branch
+
+```
+
+### last 10 commits
+```
+git log
+git log --oneline -10
+git log --oneline --graph --all        # see history
+```
 
 ### Configure name and email
 ```
-git config --global user.name "Sam Smith"     
-git config --global user.email sam@example.com    
+git config --global user.name "Sam Smith"
+git config --global user.email sam@example.com
+git config --global core.autocrlf input       # for macOS/Linux
+git config --global core.autocrlf true        # for Windows
+git config --list
+git config --global --edit
+git config --system --edit
+git config --local --edit
 ```
 
 ### Add file to git to start tracking it's chnages
@@ -98,11 +117,16 @@ git add <filename>
 git add .
 ```
 
-### Commi to ocal repository. Changes are still not on the server
+### Commi to local repository. Changes are still not on the server
 ```
 git commit -m "Commit message"
 git commit
 git commit -a
+git commit --verbose                   # show diff of changes included
+git commit -a -m "Merge branch 'feature/login' into 'master'"
+git commit -m "Resolved merge conflicts"
+git commit --amend -m "New commit message"   # change last commit message
+git commit --amend                      # change last commit message in editor
 ```
 
 ### vi   - editor
@@ -116,31 +140,54 @@ git push origin master
 
 
 ### If local repository is not connected with main repo, add server to which all changes will be pushed
-```git remote add origin <server>```
+```
+git remote add origin <server>
+```
 
 ### list repos
-```git remote -v```
+```
+git remote -v
+```
 
 ### create new branch and jump on it
-```git checkout -b <branchname>```
+```
+git checkout -b <branchname>
+git switch -c <branchname>
+>> $ git checkout -b feature/login
+>> $ git switch -c feature/login
+```
 
 ### change branch
-```git checkout <branchname>```
+```
+git checkout <branchname>
+git switch <branchname>
+```
 
 ### list branches
-```git branch```
+```
+git branch
+git branch -a        # all branches, including remote
+git branch -r        # remote branches only
+git show-branch
+git show-branch --all
+```
 
 ### delete branch
 ```
 git branch -d <branchname>
 >> $ git branch -d feature/login
+git branch -D <branchname>   # force delete
 ```
 
 ### push branch to server
-```git push origin <branchname>```
+```
+git push origin <branchname>
+```
 
 ### push all branches to server
-```git push --all origin```
+```
+git push --all origin
+```
 
 ### delete branch on server
 ```
@@ -149,10 +196,17 @@ git push origin :<branchname>
 ```
 
 ### take all changes from server
-```git pull```
+```
+git pull
+```
 
 ### merge branches
-```git merge <branchname>```
+```
+git merge <branchname>
+>> git merge feature/login
+```
+
+## Resolving conflicts
 
 ### when there are conflicts - check conflicts in base file - check changes before merge
 ```
@@ -162,13 +216,16 @@ git diff <sourcebranch> <targetbranch>
 ```
 
 ### when you resolve conflicts
-```git add <filename>```
+```
+git add <filename>
+```
 
 ### when all conflicts are resolved
-```git commit```
+```
+git commit
+```
 
-### last 10 commits
-```git log```
+
 
 
 
