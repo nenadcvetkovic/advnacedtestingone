@@ -5,37 +5,47 @@ Think in terms of workflow steps.
 
 ## Setup & configuration
 
-`git config --global user.name "Nenad"
+```
+git config --global user.name "Nenad"
 git config --global user.email "you@example.com"
+
 git config --global core.autocrlf input   # good default on macOS/Linux
-git config --global core.autocrlf true    # often used on Windows`
+git config --global core.autocrlf true    # often used on Windows
+```
 
 ## Creating / cloning repos
-`git init                        # start new repo in current folder`
-`git clone <url>                 # clone existing repo`
-`git clone git@github.com:user/repo.git`
+```
+git init                        # start new repo in current folder
+git clone <url>                 # clone existing repo
+git clone git@github.com:user/repo.git
+```
 
 ## Everyday workflow
 
-`git status                      # see changes & branch`
-`git add <file>                  # stage specific file`
-`git add .                       # stage all tracked + new files`
-`git commit -m "Describe change" # create commit`
-
-`git log --oneline --graph --all # nice history view`
-`git diff                        # see unstaged changes`
-`git diff --staged               # see staged changes`
+```
+git status                      # see changes & branch
+git add <file>                  # stage specific file
+git add .                       # stage all tracked + new files
+git commit -m "Describe change" # create commit
+```
+```
+git log --oneline --graph --all # nice history view
+git diff                        # see unstaged changes
+git diff --staged               # see staged changes
+```
 
 ## Branching & merging
 
-`git branch                      # list branches`
-`git branch feature/login-tests  # create branch`
+```
+git branch                      # list branches
+git branch feature/login-tests  # create branch
 
-`git checkout feature/login-tests    # switch (older syntax)`
-`git switch feature/login-tests      # modern syntax`
+git checkout feature/login-tests    # switch (older syntax)
+git switch feature/login-tests      # modern syntax
 
-`git merge feature/login-tests   # merge into current branch`
-`git branch -d feature/login-tests   # delete merged branch`
+git merge feature/login-tests   # merge into current branch
+git branch -d feature/login-tests   # delete merged branch
+```
 
 ## Sync with remote
 `git remote -v                   # list remotes`
