@@ -5,10 +5,10 @@ Think in terms of workflow steps.
 
 ## Setup & configuration
 
-`git config --global user.name "Nenad"`
-`git config --global user.email "you@example.com"`
-`git config --global core.autocrlf input   # good default on macOS/Linux`
-`git config --global core.autocrlf true    # often used on Windows`
+`git config --global user.name "Nenad"
+git config --global user.email "you@example.com"
+git config --global core.autocrlf input   # good default on macOS/Linux
+git config --global core.autocrlf true    # often used on Windows`
 
 ## Creating / cloning repos
 `git init                        # start new repo in current folder`
