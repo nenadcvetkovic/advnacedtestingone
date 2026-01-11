@@ -1,6 +1,7 @@
 # Testing Automation Course
 
 ## Basic and everyday Git commands
+
 Think in terms of workflow steps.
 
 ## Setup & configuration
@@ -27,8 +28,7 @@ git status                      # see changes & branch
 git add <file>                  # stage specific file
 git add .                       # stage all tracked + new files
 git commit -m "Describe change" # create commit
-```
-```
+
 git log --oneline --graph --all # nice history view
 git diff                        # see unstaged changes
 git diff --staged               # see staged changes
@@ -48,102 +48,127 @@ git branch -d feature/login-tests   # delete merged branch
 ```
 
 ## Sync with remote
-`git remote -v                   # list remotes`
-`git pull                        # fetch + merge from remote`
-`git fetch                       # fetch only`
-`git push                        # push current branch`
-`git push -u origin feature/login-tests  # push new branch and set upstream`
 
+```
+git remote -v                   # list remotes`
+git pull                        # fetch + merge from remote
+git fetch                       # fetch only
+git push                        # push current branch
+git push -u origin feature/login-tests  # push new branch and set upstream
+```
 
 ## Undo & cleanup (most common)
 
-`git restore <file>              # discard local changes (not staged)`
-`git restore --staged <file>     # unstage`
+```
+git restore <file>              # discard local changes (not staged)
+git restore --staged <file>     # unstage
 
-`git reset --hard HEAD~1         # remove last commit (dangerous if pushed)`
-`git revert <commit-hash>        # new commit that undoes previous one`
+git reset --hard HEAD~1         # remove last commit (dangerous if pushed)
+git revert <commit-hash>        # new commit that undoes previous one
+```
 
-`For daily work as a test engineer, mastering these is enough 90% of the time.`
+For daily work as a test engineer, mastering these is enough 90% of the time.
 
 
 
 # Additional git commands
 
+```
 git init    -  inicijalizuje git repozitorijum u nekom direktorijumu
+```
 
 ### Clonning repository
+
+```
 git clone username@host:/path/to/repository
+```
 
 ### status
-git status
+```git status```
 
 ### Configure name and email
+```
 git config --global user.name "Sam Smith"     
 git config --global user.email sam@example.com    
+```
 
 ### Add file to git to start tracking it's chnages
+```
 git add <filename>
 git add .
+```
 
 ### Commi to ocal repository. Changes are still not on the server
+```
 git commit -m "Commit message"
 git commit
 git commit -a
+```
 
 ### vi   - editor
 When 'vi' editor opens, press 'i' in order to start changing the file
 when done, press ESC and then :wq   (write - quit)
 
 ### push changes to server
+```
 git push origin master
+```
 
 
 ### If local repository is not connected with main repo, add server to which all changes will be pushed
-git remote add origin <server>
+```git remote add origin <server>```
 
 ### list repos
-git remote -v
+```git remote -v```
 
 ### create new branch and jump on it
-git checkout -b <branchname>
+```git checkout -b <branchname>```
 
 ### change branch
-git checkout <branchname>
+```git checkout <branchname>```
 
 ### list branches
-git branch
+```git branch```
 
 ### delete branch
+```
 git branch -d <branchname>
 >> $ git branch -d feature/login
+```
 
 ### push branch to server
-git push origin <branchname>
+```git push origin <branchname>```
 
 ### push all branches to server
-git push --all origin
+```git push --all origin```
 
 ### delete branch on server
+```
 git push origin :<branchname>
 >> git push origin --delete feature/login
+```
 
 ### take all changes from server
-git pull
+```git pull```
 
 ### merge branches
-git merge <branchname>
+```git merge <branchname>```
 
 ### when there are conflicts - check conflicts in base file - check changes before merge
+```
 git diff
 git diff --base <filename>
 git diff <sourcebranch> <targetbranch>
+```
 
 ### when you resolve conflicts
-git add <filename>
+```git add <filename>```
 
 ### when all conflicts are resolved
-git commit
+```git commit```
 
 ### last 10 commits
-git log
+```git log```
+
+
 
