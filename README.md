@@ -40,6 +40,7 @@ git diff --staged               # see staged changes
 git branch                      # list branches
 git branch feature/login-tests  # create branch
 git branch feature/login-tests  # create branch GGGG
+git checkout -b feature/login-tests   # create + switch (older syntax)
 
 git checkout feature/login-tests    # switch (older syntax)
 git switch feature/login-tests      # modern syntax
